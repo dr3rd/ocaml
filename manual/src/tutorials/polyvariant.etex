@@ -30,9 +30,8 @@ List.map f [`On; `Off];;
 \end{caml_example}
 "[>`Off|`On] list" means that to match this list, you should at
 least be able to match "`Off" and "`On", without argument.
-"[<`On|`Off|`Number of int]" means that "f" may be applied to "`Off",
-"`On" (both without argument), or "`Number" $n$ where
-$n$ is an integer.
+"[<`Number of int |`Off |`On ]" means that "f" may be applied to "`Number" $n$ (where
+$n$ is an integer), "`Off", or "`On".
 The ">" and "<" inside the variant types show that they may still be
 refined, either by defining more tags or by allowing less. As such, they
 contain an implicit type variable. Because each of the variant types
